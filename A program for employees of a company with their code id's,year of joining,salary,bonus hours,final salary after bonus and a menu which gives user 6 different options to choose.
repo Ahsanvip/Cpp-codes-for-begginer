@@ -1,0 +1,261 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	system("color f2");
+	string cid,gender;      //using string for cid which stands for code id of an employee. as it can cotains numbers and letters.
+	cid="employee_1";
+	cout<<cid<<endl;
+	int c_salary,year,leaves,n_salary,hours,ehours; //c_salary stands for current salary. n_salary stands for new salary after bonuses.
+	cout<<"Enter total hours worked:";
+	cin>>hours;
+	cout<<"Enter year You joined:";
+	cin>>year;
+	cout<<"Enter leaves you have availed:";
+	cin>>leaves;
+	cout<<"Enter Extra hours worked:";
+	cin>>ehours;
+	cout<<"Gender:";
+	cin>>gender;
+	system("cls");
+	c_salary=hours*1000;    //calculation of current salary by multiplying hours with 1000. 1000 is the pay for one hours assumed by myself. you can change it as your demands.
+	cout<<"Code ID: "<<cid<<endl;
+	cout<<"Current salary: "<<c_salary<<endl;
+	cout<<"Year Of Joining: "<<year<<endl;
+	cout<<"Total Leaves Availed: "<<leaves<<endl;
+	if(ehours<=1)   //using if for making every possible correction. like for 1hr it should not print 1hrs.
+	{
+		cout<<"Extra Hours worked: "<<ehours<<"hour"<<endl;
+	}
+	else
+	{
+		cout<<"Extra Hours worked: "<<ehours<<"hours"<<endl;
+	}
+	cout<<"Gender:"<<gender<<endl;
+	if(ehours<=8)   //condition: only first 8 hours of extra time will get paid. after that employee won't recieve any bonus.
+	{
+		n_salary=c_salary+ehours*(1000+3.5/100*1000);
+		cout<<"New Salary: "<<n_salary<<endl;
+	}
+	else
+	{
+		n_salary=c_salary+ehours*(1000+3.5/100*1000);
+		cout<<"New Salary: "<<n_salary<<endl;
+	cout<<"EMPLOYEE HAVE WORKED MORE THAN 8 HOURS!"<<endl;}
+	system("pause");
+	system("cls");
+	string cid2,gender2;
+	cid2="employee_2";
+	cout<<cid2<<endl;
+	int c_salary2,year2,leaves2,n_salary2,hours2,ehours2;       //declairng variables fo employee 2.
+	cout<<"Enter total hours worked:";
+	cin>>hours2;
+	cout<<"Enter year You joined:";
+	cin>>year2;
+	cout<<"Enter leaves you have availed:";
+	cin>>leaves2;
+	cout<<"Enter Extra hours worked:";
+	cin>>ehours2;
+	cout<<"Gender:";
+	cin>>gender2;
+	system("cls");
+	c_salary2=hours2*1000;
+	cout<<"Code ID: "<<cid2<<endl;
+	cout<<"Current salary: "<<c_salary2<<endl;
+	cout<<"Year Of Joining: "<<year2<<endl;
+	cout<<"Total Leaves Availed: "<<leaves2<<endl;
+	if(ehours2<=1)
+	{
+		cout<<"Extra Hours worked: "<<ehours2<<"hour"<<endl;
+	}
+	else
+	{
+		cout<<"Extra Hours worked: "<<ehours2<<"hours"<<endl;
+	}
+	cout<<"Gender: "<<gender2<<endl;
+	if(ehours<=8)
+	{
+		n_salary2=c_salary2+ehours2*(1000+3.5/100*1000);
+		cout<<"New Salary: "<<n_salary2<<endl;}
+	else
+	{
+		n_salary2=c_salary2+ehours2*(1000+3.5/100*1000);
+		cout<<"New Salary: "<<n_salary2<<endl;
+		cout<<"EMPLOYEE HAVE WORKED MORE THAN 8 HOURS!"<<endl;}
+	system("pause");
+	system("cls");
+	string cid3,gender3;
+	cid3="employee_3";
+	cout<<cid3<<endl;
+	int c_salary3,year3,leaves3,n_salary3,hours3,ehours3;       //declairing variables for employee 3.
+	cout<<"Enter total hours worked:";
+	cin>>hours3;
+	cout<<"Enter year You joined:";
+	cin>>year3;
+	cout<<"Enter leaves you have availed:";
+	cin>>leaves3;
+	cout<<"Enter Extra hours worked:";
+	cin>>ehours3;
+	cout<<"Gender:";
+	cin>>gender3;
+	system("cls");
+	c_salary3=hours3*1000;
+	cout<<"Code ID: "<<cid3<<endl;
+	cout<<"Current salary: "<<c_salary3<<endl;
+	cout<<"Year Of Joining: "<<year3<<endl;
+	cout<<"Total Leaves Availed: "<<leaves3<<endl;
+	if(ehours3<=1)
+	{
+		cout<<"Extra Hours worked: "<<ehours3<<"hour"<<endl;
+	}
+	else
+	{
+		cout<<"Extra Hours worked: "<<ehours3<<"hours"<<endl;
+	}
+	cout<<"Gender:"<<gender3<<endl;
+	if(ehours3<=8)
+	{
+		n_salary3=c_salary3+ehours3*(1000+3.5/100*1000);
+		cout<<"New Salary: "<<n_salary3<<endl;
+	}
+	else
+	{
+		n_salary3=c_salary3+ehours3*(1000+3.5/100*1000);
+		cout<<"New Salary: "<<n_salary3<<endl;
+		cout<<"EMPLOYEE HAVE WORKED MORE THAN 8 HOURS!"<<endl;}
+	system("pause");
+	system("cls");
+	int menu;   //for menu being asked in question.
+	cout<<"1.highest bonus. \n2.Lowest Bonus. \n3.Employe who spent less then 30hrs. \n4.Over timers Employees. \n5.Employe of the month. \n6.Find an employe's data by code id. \nEnter a choice:";
+	cin>>menu;
+	switch(menu)
+	{
+		
+		case 1:     //telling which employee has gained highest bonus.
+			if(ehours>ehours2&&ehours>ehours3)
+			cout<<"Highest bonus is avhieved by "<<cid<<endl;
+			if(ehours2>ehours&&ehours2>ehours3)
+			cout<<"Highest bonus is avhieved by "<<cid2<<endl;
+			if(ehours3>ehours2&&ehours3>ehours)
+			cout<<"Highest bonus is avhieved by "<<cid3<<endl;
+			break;
+		case 2:     //tellling which employee has gained lowest bonus.
+			if(ehours<ehours2&&ehours<ehours3)
+				cout<<"Lowest bonus is avhieved by "<<cid<<endl;
+			if(ehours2<ehours&&ehours2<ehours3)
+				cout<<"Lowest bonus is avhieved by "<<cid2<<endl;
+			if(ehours3<ehours2&&ehours3<ehours)
+				cout<<"Lowest bonus is avhieved by "<<cid3<<endl;
+			break;
+		case 3:     //checking which employee has spent less than minimum time(i.e. 30 hrs) in office.
+			if(hours<30)
+			cout<<cid<<" has spent the minimum time of "<<hours<<" hours in a week."<<endl;
+			if(hours2<30)
+			cout<<cid2<<" has spent the minimum time of "<<hours2<<" hours in a week."<<endl;
+			if(hours3<30)
+			cout<<cid3<<" has spent the minimum time of "<<hours3<<" hours in a week."<<endl;
+			else if (hours>30&&hours2>30&&hours3>30)
+			cout<<"Every employee did great job!"<<endl;
+			break;
+		case 4:     //list of employees who did extra hours.
+			cout<<"Employs who spent extra time in Office."<<endl;
+			if(ehours>0)
+			cout<<cid<<endl;
+			if(ehours2>0)
+			cout<<cid2<<endl;
+			if(ehours3>0)
+			cout<<cid3<<endl;
+			else if(ehours==0&&ehours2==0&&ehours3==0)
+			cout<<"No employee did extra hours."<<endl;
+			break;
+		case 5:     //employee of the month on the basis of most hours worked or minimum leaves.
+			if(ehours>ehours2&&ehours>ehours3||leaves<leaves2&&leaves<leaves3)
+			cout<<cid<<" is the employee of the month on the basis of minimum leaves or Extra hours."<<endl;
+			if(ehours2>ehours&&ehours2>ehours3||leaves2<leaves&&leaves2<leaves3)
+			cout<<cid2<<" is the employee of the month on the basis of minimum leaves or Extra hours."<<endl;
+			if(ehours3>ehours2&&ehours3>ehours||leaves3<leaves2&&leaves3<leaves)
+			cout<<cid3<<" is the employee of the month on the basis of minimum leaves or Extra hours."<<endl;
+			break;
+		case 6:             //searching employees details by their ids
+			cout<<"Code Id's: \n\temployee_1. \n\temployee_2.\n\temployee_3.\n Enter a Code id:";   //id's of employees
+			string id;
+			cin>>id;
+			if(id==cid)                 //for searching and displaying id and details of employee 1
+			{
+					cout<<"Code ID: "<<cid<<endl;
+	cout<<"Current salary: "<<c_salary<<endl;
+	cout<<"Year Of Joining: "<<year<<endl;
+	cout<<"Total Leaves Availed: "<<leaves<<endl;
+	if(ehours<=1)
+	{
+		cout<<"Extra Hours worked: "<<ehours<<"hour"<<endl;
+	}
+	else
+	{
+		cout<<"Extra Hours worked: "<<ehours<<"hours"<<endl;
+	}
+	cout<<"Gender:"<<gender<<endl;
+	if(ehours<=8)
+	{
+		n_salary=c_salary+ehours*(1000+3.5/100*1000);
+		cout<<"New Salary: "<<n_salary<<endl;
+	}
+	else
+	{
+		n_salary=c_salary+ehours*(1000+3.5/100*1000);
+		cout<<"New Salary: "<<n_salary<<endl;
+	cout<<"EMPLOYEE HAVE WORKED MORE THAN 8 HOURS!"<<endl;}
+	}
+	else if(id==cid2)       //for searching and displaying the id and details of 2nd employee
+	{
+			cout<<"Code ID: "<<cid2<<endl;
+	cout<<"Current salary: "<<c_salary2<<endl;
+	cout<<"Year Of Joining: "<<year2<<endl;
+	cout<<"Total Leaves Availed: "<<leaves2<<endl;
+	if(ehours2<=1)
+	{
+		cout<<"Extra Hours worked: "<<ehours2<<"hour"<<endl;
+	}
+	else
+	{
+		cout<<"Extra Hours worked: "<<ehours2<<"hours"<<endl;
+	}
+	cout<<"Gender: "<<gender2<<endl;
+	if(ehours<=8)
+	{
+		n_salary2=c_salary2+ehours2*(1000+3.5/100*1000);
+		cout<<"New Salary: "<<n_salary2<<endl;}
+	else
+	{
+		n_salary2=c_salary2+ehours2*(1000+3.5/100*1000);
+		cout<<"New Salary: "<<n_salary2<<endl;
+	cout<<"EMPLOYEE HAVE WORKED MORE THAN 8 HOURS!"<<endl;}
+	}
+	else if(id==cid3)               //for searching and displaying id and details of employee 3
+	{
+			cout<<"Code ID: "<<cid3<<endl;
+	cout<<"Current salary: "<<c_salary3<<endl;
+	cout<<"Year Of Joining: "<<year3<<endl;
+	cout<<"Total Leaves Availed: "<<leaves3<<endl;
+	if(ehours3<=1)
+	{
+		cout<<"Extra Hours worked: "<<ehours3<<"hour"<<endl;
+	}
+	else
+	{
+		cout<<"Extra Hours worked: "<<ehours3<<"hours"<<endl;
+	}
+	cout<<"Gender:"<<gender3<<endl;
+	if(ehours3<=8)
+	{
+		n_salary3=c_salary3+ehours3*(1000+3.5/100*1000);
+		cout<<"New Salary: "<<n_salary3<<endl;
+	}
+	else
+	{
+		n_salary3=c_salary3+ehours3*(1000+3.5/100*1000);
+		cout<<"New Salary: "<<n_salary3<<endl;
+		cout<<"EMPLOYEE HAVE WORKED MORE THAN 8 HOURS!"<<endl;}
+	}
+	}
+}
